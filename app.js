@@ -13,7 +13,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 //Solve CORS
-app.use(cors({ credentials: true, origin: "http://127.0.0.1:5173" }));
+app.use(
+  cors({ credentials: true, origin: "https://picvibe-frontend.vercel.app" })
+);
 
 //Upload directory
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
