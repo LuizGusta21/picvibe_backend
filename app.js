@@ -19,6 +19,7 @@ app.use(
     origin: "https://picvibe-frontend.vercel.app",
     methods: "GET, POST, PUT, DELETE",
     allowedHeaders: "Content-Type, Authorization",
+    "Access-Control-Allow-Origin": "https://picvibe-frontend.vercel.app",
   })
 );
 
