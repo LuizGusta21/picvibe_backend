@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const path = require("path");
-const cors = require("cors");
+// const cors = require("cors");
 
 const port = process.env.PORT;
 
@@ -13,15 +13,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 //Solve CORS
-app.use(
-  cors({
-    credentials: true,
-    origin: "https://picvibe-frontend.vercel.app",
-    methods: "GET, POST, PUT, DELETE",
-    allowedHeaders: "Content-Type, Authorization",
-    "Access-Control-Allow-Origin": "https://picvibe-frontend.vercel.app",
-  })
-);
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin: "https://picvibe-frontend.vercel.app",
+//     methods: "GET, POST, PUT, DELETE",
+//     allowedHeaders: "Content-Type, Authorization",
+//   })
+// );
 
 //Upload directory
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
