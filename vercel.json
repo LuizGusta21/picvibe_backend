@@ -1,0 +1,25 @@
+{
+  "version": 2, 
+  "builds": [
+    {
+      "src": "./app.js", 
+      "use": "@vercel/node"
+     
+    }
+  ],
+  "routes": [
+   
+    {
+      "src": "/(.*)",
+      "dest": "./app.js" 
+    }
+    
+  ],
+  "env": {
+    "PORT": "5000",
+    "DB_USER": "luizgustavo",
+    "DB_PASS": "UTrAFCVj2yp85L94",
+    "JWT_SECRET": "maymun"
+  }
+  
+}
