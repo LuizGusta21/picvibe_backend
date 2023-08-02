@@ -14,7 +14,12 @@ app.use(express.urlencoded({ extended: false }));
 
 //Solve CORS
 app.use(
-  cors({ credentials: true, origin: "https://picvibe-frontend.vercel.app" })
+  cors({
+    credentials: true,
+    origin: "https://picvibe-frontend.vercel.app",
+    methods: "GET, POST, PUT, DELETE",
+    allowedHeaders: "Content-Type, Authorization",
+  })
 );
 
 //Upload directory
