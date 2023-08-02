@@ -20,6 +20,15 @@
     "DB_USER": "luizgustavo",
     "DB_PASS": "UTrAFCVj2yp85L94",
     "JWT_SECRET": "maymun"
-  }
+  },
+  
+    "functions": {
+      "/app.js": {
+        "memory": 3008,
+        "maxDuration": 60
+      }
+      
+    }
+  
   
 }
